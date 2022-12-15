@@ -1,0 +1,24 @@
+{
+  "name": "Space Karen",
+  "description": "Correctly label Elon Musk as Space Karen",
+  "icons": { "128": "logo128.png" },
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Space Karen"
+  },
+  "content_scripts": [
+    {
+      "run_at" : "document_end",
+      "js": ["corrections.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ]
+}
